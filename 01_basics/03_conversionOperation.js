@@ -50,5 +50,47 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 let someNumber = 33
 
 let stringNumber = String(someNumber)
-console.log(stringNumber)       // Although the output on the console may seem as an integer(33) but behind the scenes the datatype has been changed
-console.log(typeof stringNumber);       // Console Prints "string"
+// console.log(stringNumber)       // Although the output on the console may seem as an integer(33) but behind the scenes the datatype has been changed
+// console.log(typeof stringNumber);       // Console Prints "string"
+
+
+// **************************************** Operations *********************************************************
+
+let value = 3
+let negValue = -value
+// console.log(negValue);          // prints negative of the value on the console i.e., -3
+
+// console.log(2+2)
+// console.log(2-2)
+// console.log(2*2)
+// console.log(2**3)   // 2 raised to the power of 3
+// console.log(2%2)
+// console.log(2/2)
+
+let str1 = "Hello"
+let str2 = " Subhajit!!"
+
+let str3 = str1 + str2      // Contents of str1 and str2 are added(can't be subtracted as such) and stored into str3
+// console.log(str3);
+
+// console.log("1" + 2)        // 12 ; If String first then whole thing inside the bracket is converted into string
+// console.log(1 + "2")        // 12 ; If String last then whole thing inside the bracket till we receive anything in string datatype, that operation is performed and then converted into string to later be added with the string
+// console.log("1" + "2")        // 12
+// console.log("1" + 2 + 2)        // 122
+// console.log(1 + 2 + "2")        // 32 ; If String last then whole thing inside the bracket till we receive anything in string datatype, that operation is performed and then converted into string to later be added with the string
+// Although the above two lines of code may seem confusing due to their varying outputs because of the "" but in Major companies such lines of code would not be accepted because they don't really provide any clarity and is quite confusing while it could have been handled in a better way
+
+// console.log( (3 + 4) * 5 / 6)       // Like by using brackets to avoid confusion on which part to be executed first
+
+// console.log(true)
+// console.log(+true)  // Type Conversion because of the use of Increment Operator, true(boolean of 1) is first converted to 1 and then printed on the console
+// console.log(+"")  // Type Conversion because of the use of Increment Operator, ""(boolean of 0) is first converted to 0 and then printed on the console
+
+// let num1, num2, num3
+
+// num1 = num2 = num3 = 2 + 2          // Not Recommendable due to low readability
+
+let counter = 100
+++counter
+console.log(counter);
+
