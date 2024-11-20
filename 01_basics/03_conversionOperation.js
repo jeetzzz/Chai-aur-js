@@ -4,17 +4,17 @@ let score = undefined
 // On the other hand, in the frontend we will definitely know the datatype as we ourselves are defining and declaring datatype of the variable
 
 // Two Ways to know the type of a variable we are working on
-console.log(typeof score);          // One being by writing the varible simply in adjacent to the typeof Operator
-console.log(typeof(score));         // and the other being by writing the variable as a method
+// console.log(typeof score);          // One being by writing the varible simply in adjacent to the typeof Operator
+// console.log(typeof(score));         // and the other being by writing the variable as a method
 
 // Now Suppose we receive the value in string form but we are 100% sure that we need to work with it in number form, then we use this
 let valueInNumber = Number(score)      // Something like a defined class but we need to remember that First letter is Capital in most dataTypes
-console.log(typeof valueInNumber);
+// console.log(typeof valueInNumber);
 
 // For example if we have score = "33abc" which is neither number completely nor a string completely, Hence on conversion we would not be able to convert the string into number completely
 // But that is not the case, JS converts(forcefully) string into number and returns the data type as number in this case but when we print this variable(valueInNumber) which is forcefully converted we
 // we receive Nan which means Not a Number denoting the variable was not completely a number
-console.log(valueInNumber);
+// console.log(valueInNumber);
 
 // Now Suppose we receive null in the form as let score = null
 // Then what should happen on printing the variable valueInNumber??
@@ -30,3 +30,25 @@ console.log(valueInNumber);
 // "33" => 33
 // "33abc" => Nan
 // true => 1; false => 0
+
+// let isloggedIn = 1
+
+// let booleanIsloggedIn = Boolean(isloggedIn)
+// console.log(booleanIsloggedIn)
+//          We get "true" on the console
+
+// let isLoggedIn = ""                 //          We get "false" on the console
+let isLoggedIn = "Subhajit"            //          We get "true" on the console
+
+let booleanIsLoggedIn = Boolean(isLoggedIn)
+// console.log(booleanIsLoggedIn);
+
+// 1 => true; 0 => false
+// "hitesh" => true
+// "" => false
+
+let someNumber = 33
+
+let stringNumber = String(someNumber)
+console.log(stringNumber)       // Although the output on the console may seem as an integer(33) but behind the scenes the datatype has been changed
+console.log(typeof stringNumber);       // Console Prints "string"
