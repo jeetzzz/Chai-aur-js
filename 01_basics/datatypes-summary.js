@@ -55,4 +55,43 @@ const myFunction = function(){      // storing the definiton of a function into 
 // console.log(typeof myFunction);         // returns "function" but is known as Function Object or Object Function
 // console.log(typeof myObj);             // object
 // console.log(typeof anotherId);         // symbol
-console.log(typeof heroes);
+// console.log(typeof heroes);            // object
+
+// https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// In initial days of programming, in earlier languages like C, both reserving memory and to free it(memory) up was our task
+// like how much space we need to allocate and where
+// but in Modern and mid-modern languages like Js, we are not given enough control of Memory
+
+// Memories are basically of Two Types - Stack Memory and Heap Memory
+// Stack Memory(is used for Primitive Datatypes) and Heap Memory (Non - Primitive)
+// Whenever Stack Memory is used, whatever variable we declare, we get it's copy; However once something is defined in the Heap Memory, from there we get the reference that also of the original value, so any changes in this affects the original value as well
+
+let myYoutubeName = "Mr. Beast"
+
+let anotherName = myYoutubeName
+anotherName = "Shree Jaanvar"
+
+// console.log(myYoutubeName)          // Mr. Beast
+// console.log(anotherName)            // Shree Jaanvar
+// anotherName is alloted contents from the copy of myYoutubeName and anychange in anotherName hence will not affect myYoutubeName the original one because both are now are a separate identity
+// Above variables are stored in Stack Memory btw
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl",
+}
+// defined an object for userOne
+
+let userTwo = userOne 
+
+// two access in objects we use . operator
+
+userTwo.email = "subhajit@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+// both return the same value as "subhajit@google.com"
+
